@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML Website</title>
+  </head>
+  <body style="border: 2px solid black; margin: 16px">
+    <header>
+      <nav
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+        "
+      >
+        <div style="display: flex; align-items: center; gap: 10px">
+          <div style="background-color: black; width: 25px; height: 25px"></div>
+          <p>Your name</p>
+        </div>
+        <div>
+          <ul
+            style="
+              display: flex;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              text-decoration: none;
+              flex-direction: row;
+              gap: 5px;
+            "
+          >
+            <li>Home</li>
+            <li>/</li>
+            <li>Projects</li>
+            <li>/</li>
+            <li>Articles</li>
+            <li>/</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 10px;
+          padding-bottom: 30px;
+        "
+      >
+        <h1>Frontend Developer</h1>
+        <p>html only with proper layout, no styling</p>
+      </section>
+      <section style="display: flex">
+        <div
+          style="
+            flex: 1;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <h2
+            style="
+              align-self: flex-start;
+              margin-bottom: 8px;
+              padding-left: 5px;
+            "
+          >
+            Projects
+          </h2>
+          <ul
+            style="
+              list-style: none;
+              padding: 0px;
+              margin: 0;
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              width: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+              margin-top: 0px;
+            "
+          >
+            <li
+              style="width: 100%; border-bottom: 2px solid black; padding: 5px"
+            >
+              HTML Only Portfolio
+            </li>
+            <li
+              style="width: 100%; border-bottom: 2px solid black; padding: 5px"
+            >
+              Calculator
+            </li>
+            <li
+              style="width: 100%; border-bottom: 2px solid black; padding: 5px"
+            >
+              Quiz App
+            </li>
+            <li
+              style="width: 100%; border-bottom: 2px solid black; padding: 5px"
+            >
+              Countdown Timer
+            </li>
+            <li style="width: 100%; padding: 5px">Product Upcoming Page</li>
+          </ul>
+        </div>
+        <div
+          style="
+            flex: 1;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+
+            display: flex;
+            flex-direction: column;
+          "
+        >
+          <div style="flex: 1; border-bottom: 2px solid black; padding: 5px">
+            <h2 style="margin-bottom: 8px">Work Experience</h2>
+            <p style="margin-top: 0px">roadmap.sh</p>
+            <p>Solved all the frontend Projects</p>
+            <a href="https://your-profile-link.com" target="_blank"
+              >Visit my Profile</a
+            >
+          </div>
+          <div style="flex: 1; padding: 5px">
+            <p>
+              OpenSource Work Contributed to 50 opensource projects. Made my own
+              projects with 200 GitHub Stars.
+            </p>
+            <a href="https://your-profile-link.com" target="_blank"
+              >Visit my GitHub</a
+            >
+          </div>
+        </div>
+        <div
+          style="
+            flex: 1;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+          "
+        >
+          <h2 style="margin-bottom: 8px">Education</h2>
+          <p style="margin-top: 0; margin-bottom: 8px">
+            Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30
+            sessions. <br />Courses I took:
+          </p>
+          <ul style="list-style-type: '- '; padding-left: 12px">
+            <li>Object Oriented Programming</li>
+            <li>Data Structures and Algorithms</li>
+            <li>Web Engineering</li>
+            <li>Artificial Intelligence</li>
+            <li>Human Computer Interaction</li>
+            <li>Computer Graphics</li>
+            <li>Database Management Systems</li>
+            <li>Distributed Database Systems</li>
+            <li>Discreet Mathematics</li>
+          </ul>
+        </div>
+      </section>
+      <section style="padding: 30px">
+        <h2>Reviews from my Teachers</h2>
+        <div style="display: flex; gap: 15px">
+          <div
+            style="
+              flex: 1;
+              border: 2px solid black;
+              border-radius: 15px;
+              padding: 5px;
+            "
+          >
+            <p>
+              John doe was a brilliant student; always stood out with his
+              assignments.
+            </p>
+            <p style="color: lightgray">Jane Doe<br />Assistant Professor</p>
+          </div>
+          <div
+            style="
+              flex: 1;
+              border: 2px solid black;
+              border-radius: 15px;
+              padding: 5px;
+            "
+          >
+            <p>
+              John doe was a brilliant student; always stood out with his
+              assignments.
+            </p>
+            <p style="color: lightgray">Jane Doe<br />Assistant Professor</p>
+          </div>
+          <div
+            style="
+              flex: 1;
+              border: 2px solid black;
+              border-radius: 15px;
+              padding: 5px;
+            "
+          >
+            <p>
+              John doe was a brilliant student; always stood out with his
+              assignments.
+            </p>
+            <p style="color: lightgray">Jane Doe<br />Assistant Professor</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      style="
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-top: 25px;
+        padding-bottom: 15px;
+      "
+    >
+      <p>© all rights reserved 2025</p>
+    </footer>
+  </body>
+</html>
