@@ -1,0 +1,23 @@
+p {
+  margin: 0;
+  font-size: large;
+}
+
+body {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 25px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
