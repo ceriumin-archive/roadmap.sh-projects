@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datepicker UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main
+      style="
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          border: solid black 1px;
+          width: 248px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <div style="padding: 5px">dd/mm/yyyy</div>
+        <div
+          aria-label="Open calendar"
+          style="
+            cursor: pointer;
+            padding: 5px;
+            border-left: solid black 1px;
+            font-size: 20px;
+          "
+        >
+          &#128197;
+        </div>
+      </div>
+      <div
+        style="
+          border: 1px solid black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 10px;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 10px;
+          "
+        >
+          <button
+            aria-label="Previous month"
+            style="
+              background: none;
+              border: none;
+              font-size: 1wrem;
+              cursor: pointer;
+            "
+          >
+            &#9664;
+          </button>
+          <p style="margin: 0">December 2022</p>
+          <button
+            aria-label="Next month"
+            style="
+              background: none;
+              border: none;
+              font-size: 1wrem;
+              cursor: pointer;
+            "
+          >
+            &#9654;
+          </button>
+        </div>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            width: 248px;
+          "
+        >
+          <style>
+            .week-cell {
+              aspect-ratio: 1 / 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-sizing: border-box;
+            }
+          </style>
+
+          <div class="week-cell">S</div>
+          <div class="week-cell">M</div>
+          <div class="week-cell">T</div>
+          <div class="week-cell">W</div>
+          <div class="week-cell">T</div>
+          <div class="week-cell">F</div>
+          <div class="week-cell">S</div>
+        </div>
+      </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          width: 250px;
+        "
+      >
+        <!-- Calendar grid cells -->
+        <style>
+          .calendar-cell {
+            aspect-ratio: 1 / 1;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+          }
+        </style>
+
+        <!-- Row 1 -->
+        <div class="calendar-cell" data-number="1"></div>
+        <div class="calendar-cell" data-number="2"></div>
+        <div class="calendar-cell" data-number="3"></div>
+        <div class="calendar-cell" data-number="4"></div>
+        <div class="calendar-cell" data-number="5"><span>1</span></div>
+        <div class="calendar-cell" data-number="6"><span>2</span></div>
+        <div class="calendar-cell" data-number="7"><span>3</span></div>
+        <!-- Row 2 -->
+        <div class="calendar-cell" data-number="8"><span>4</span></div>
+        <div class="calendar-cell" data-number="9"><span>5</span></div>
+        <div class="calendar-cell" data-number="10"><span>6</span></div>
+        <div class="calendar-cell" data-number="11"><span>7</span></div>
+        <div class="calendar-cell" data-number="12"><span>8</span></div>
+        <div class="calendar-cell" data-number="13"><span>9</span></div>
+        <div class="calendar-cell" data-number="14"><span>10</span></div>
+        <!-- Row 3 -->
+        <div class="calendar-cell" data-number="15"><span>11</span></div>
+        <div class="calendar-cell" data-number="16"><span>12</span></div>
+        <div class="calendar-cell" data-number="17"><span>13</span></div>
+        <div class="calendar-cell" data-number="18"><span>14</span></div>
+        <div class="calendar-cell" data-number="19"><span>15</span></div>
+        <div class="calendar-cell" data-number="20"><span>16</span></div>
+        <div class="calendar-cell" data-number="21"><span>17</span></div>
+        <!-- Row 4 -->
+        <div class="calendar-cell" data-number="22"><span>18</span></div>
+        <div class="calendar-cell" data-number="23"><span>19</span></div>
+        <div class="calendar-cell" data-number="24"><span>20</span></div>
+        <div class="calendar-cell" data-number="25"><span>21</span></div>
+        <div class="calendar-cell" data-number="26"><span>22</span></div>
+        <div class="calendar-cell" data-number="27"><span>23</span></div>
+        <div class="calendar-cell" data-number="28"><span>24</span></div>
+        <!-- Row 5 -->
+        <div class="calendar-cell" data-number="29"><span>25</span></div>
+        <div class="calendar-cell" data-number="30"><span>26</span></div>
+        <div class="calendar-cell" data-number="31"><span>27</span></div>
+        <div class="calendar-cell" data-number="32"><span>28</span></div>
+        <div class="calendar-cell" data-number="33"><span>29</span></div>
+        <div class="calendar-cell" data-number="34"><span>30</span></div>
+        <div class="calendar-cell" data-number="35"><span>31</span></div>
+      </div>
+    </main>
+  </body>
+</html>
