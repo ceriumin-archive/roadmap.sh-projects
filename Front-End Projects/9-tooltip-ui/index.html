@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip UI</title>
+  </head>
+
+  <style>
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: 125%;
+      transform: translateX(-50%);
+      background: #333;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+      z-index: 10;
+    }
+
+    .tooltip:hover::after {
+      opacity: 1;
+    }
+
+    .tooltip::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 115%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background: #333;
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 9;
+    }
+
+    .tooltip:hover::before {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div
+      style="
+        border: black solid 2px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+      "
+    >
+      <p class="tooltip" data-tooltip="Go to your Homepage">Home</p>
+      <span>&bull;</span>
+      <p class="tooltip" data-tooltip="See your Projects">Projects</p>
+      <span>&bull;</span>
+      <p class="tooltip" data-tooltip="Read the Blog">Blog</p>
+    </div>
+  </body>
+</html>
