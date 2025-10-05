@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  border: black solid 2px;
+  border-radius: 10px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+}
+
+.tab {
+  color: grey;
+}
+
+.tab.active {
+  text-decoration: underline;
+  color: black;
+}

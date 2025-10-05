@@ -6,4 +6,5 @@
 [6- Datepicker UI](https://roadmap.sh/projects/datepicker-ui)
 [7- Accessible Form UI](https://roadmap.sh/projects/accessible-form-ui)
 [8- Accessible Form UI](https://roadmap.sh/projects/image-grid)
-[8- Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
+[9- Tooltip UI](https://roadmap.sh/projects/tooltip-ui)
+[10- Tabs](https://roadmap.sh/projects/simple-tabs)
