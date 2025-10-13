@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Consent</title>
+  </head>
+  <body>
+    <div class="container">
+      <button
+        style="
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background: transparent;
+          border: none;
+          color: #fff;
+          font-size: 1.2rem;
+          cursor: pointer;
+        "
+        aria-label="Close"
+        class="close-button"
+      >
+        &times;
+      </button>
+      <div class="info">
+        <p>We use cookies to improve your user experience.</p>
+        <button class="submit-button">I like Cookies</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    padding: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    z-index: 1000;
+    left: auto;
+    transform: none;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submit-button {
+    color: black;
+    font-weight: 500;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .submit-button:hover {
+    opacity: 90%;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const closeBtn = document.querySelector(".close-button");
+    const submitBtn = document.querySelector(".submit-button");
+    const banner = document.querySelector(".container");
+
+    if (localStorage.getItem("cookies") === "true") {
+      banner.style.display = "none";
+      return;
+    }
+
+    closeBtn.addEventListener("click", () => {
+      banner.style.display = "none";
+    });
+
+    submitBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies", "true");
+      banner.style.display = "none";
+    });
+  });
+</script>
