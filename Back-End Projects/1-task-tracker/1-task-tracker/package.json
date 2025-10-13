@@ -1,0 +1,21 @@
+{
+  "name": "my-cli-app",
+  "version": "1.0.0",
+  "description": "A command-line interface application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "cli",
+    "command-line",
+    "application"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "task": "./index.js"
+  }
+}

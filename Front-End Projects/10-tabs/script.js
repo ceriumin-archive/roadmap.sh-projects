@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function activateTab(idx) {
     tabs.forEach((tab, i) => {
-      tab.classList.toggle("active", i === idx);
+      tabs[i].classList.toggle("active", i === idx);
       panels[i].classList.toggle("active", i === idx);
     });
   }
