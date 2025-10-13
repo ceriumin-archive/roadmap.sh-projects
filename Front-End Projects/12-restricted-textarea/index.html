@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restricted Textarea</title>
+  </head>
+  <body>
+    <div style="position: relative; display: inline-block">
+      <textarea style="padding-bottom: 28px"></textarea>
+      <div
+        id="char-count"
+        style="
+          position: absolute;
+          right: 20px;
+          bottom: 10px;
+          font-size: 12px;
+          color: black;
+          pointer-events: none;
+          background: transparent;
+        "
+      ></div>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  textarea {
+    width: 300px;
+    min-height: 50px;
+    max-height: 250px;
+    resize: vertical;
+    border-radius: 15px;
+    border: solid black 2px;
+    box-sizing: border-box;
+    padding: 10px;
+    outline: none;
+  }
+
+  textarea.restricted {
+    border: solid red 2px !important;
+  }
+</style>
+
+<script defer>
+  const textarea = document.querySelector("textarea");
+  const charCountDiv = document.getElementById("char-count");
+  const maxInput = 250;
+
+  textarea.addEventListener("input", function (event) {
+    if (textarea.value.length > maxInput) {
+      textarea.value = textarea.value.slice(0, maxInput);
+    }
+    const inputLength = textarea.value.length;
+    charCountDiv.textContent = `${inputLength} / ${maxInput}`;
+
+    if (inputLength >= maxInput) {
+      textarea.classList.add("restricted");
+      charCountDiv.style.color = "red";
+    } else {
+      textarea.classList.remove("restricted");
+      charCountDiv.style.color = "black";
+    }
+  });
+
+  charCountDiv.textContent = `0 / ${maxInput}`;
+</script>
