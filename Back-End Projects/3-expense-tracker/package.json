@@ -1,0 +1,22 @@
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "description": "A command-line interface application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "commander": "^14.0.2"
+  },
+  "keywords": [
+    "cli",
+    "command-line",
+    "application"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "expense-tracker": "./index.js"
+  }
+}

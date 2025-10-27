@@ -10,6 +10,7 @@
 [10- Tabs](https://roadmap.sh/projects/simple-tabs)
 [11- Cookie Consent](https://roadmap.sh/projects/cookie-consent)
 [11- Restricted Textarea](https://roadmap.sh/projects/restricted-textarea)
+[12- Accordion Component](https://roadmap.sh/projects/accordion)
 
 [1- Task Tracker](https://roadmap.sh/projects/task-tracker)
 [2- GitHub User Activity](https://roadmap.sh/projects/github-user-activity)
