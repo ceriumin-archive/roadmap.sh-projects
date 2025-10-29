@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+</head>
+<body>
+    <main class="container">
+        <h1>Age Calculator</h1>
+        <div class="calculator">
+            <label for="birthdate">Enter your birth date</label>
+            <input type="date" id="birthdate" name="birthdate">
+            <button>
+                Calculate
+            </button>
+        </div>
+        <p class="result"></p>
+    </main>
+</body>
+</html>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .calculator {
+        flex-direction: column;
+    }
+
+    .calculator input {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        width: 100%;
+        padding: 5px;
+        border: solid;
+        font-weight: 500;
+        box-sizing: border-box;
+    }
+
+    .calculator button {
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+        padding: 8px;
+        border: none;
+        background-color: gray;
+        border-radius: 5px;
+        color: white;
+        font-weight: 500;
+        cursor: pointer
+    }
+
+    .calculator button:active {
+        background-color: rgb(141, 141, 141);
+    }
+</style>
+
+<script>
+    const datepicker = document.querySelector('#birthdate');
+    const button = document.querySelector('.calculator button');
+
+    button.addEventListener('click', function() {
+        const birthdate = datepicker.value;
+        const result = document.querySelector('.result');
+        if (!birthdate) {
+            result.textContent = "Please select a valid birth date.";
+            return;
+        }
+        const birth = new Date(birthdate);
+        const today = new Date();
+        let year = today.getFullYear() - birth.getFullYear();
+        const m = today.getMonth() - birth.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+            year--;
+        }
+        result.textContent = `You are ${year} year${year == 1 ? '' : 's'} ${m} month${m == 1 ? '' : 's'} old.`;
+    });
+</script>
