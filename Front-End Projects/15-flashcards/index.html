@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flash Cards</title>
+    </head>
+    <body>
+        <main class="container">
+            <div class="progress-bar_container">
+                <div class="progress-bar"></div>
+                <p class="progress"></p>
+            </div>
+            <div class="flash-card_container">
+                <div class="flash-card">
+                    
+                </div>
+                <div class="controls">
+                    <div class="control" data-action="previous">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>Previous</p>
+                    </div>
+                    <div class="control" data-action="answer">
+                        <p>Show Answer</p>
+                    </div>
+                    <div class="control" data-action="next">
+                        <p>Next</p>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
+
+<style>
+    p {
+        margin: 7.5px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 450px;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .progress-bar_container {
+        display: flex;
+        border: lightgrey 2px solid;
+        width: 100%;
+        height: 35px;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    .progress-bar_container {
+        position: relative;
+    }
+
+    .progress-bar_container p {
+        position: absolute;
+        margin: 0;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .progress-bar {
+        position: relative;
+        width: 100%;
+        background-color: lightgray;
+        border-radius: 10px;
+    }
+
+    .flash-card_container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 2px lightgray solid;
+        border-radius: 10px;
+        padding: 5px;
+        gap: 5px
+    }
+
+    .flash-card {
+        display: flex;
+        background-color: lightgray;
+        min-height: 250px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flash-card p {
+        max-width: 100px;
+        text-align: center;
+        font-size: 1.5rem
+    }
+
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        border-radius: 10px;
+    }
+
+    .control {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 7.5px;
+    }
+</style>
+
+<script>
+    const progressText = document.querySelector('.progress');
+    const progressBar = document.querySelector('.progress-bar');
+    const flashCard = document.querySelector('.flash-card');
+
+    const controls = document.querySelectorAll('.control[data-action]');
+
+    let isAnswerShown = false;
+    let currentCardIndex = 0;
+
+    const cards = [];
+
+    async function loadCards() {
+        try {
+            const response = await fetch('./cards.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const data = await response.json();
+            cards.push(...data);
+
+            progressBar.style.width = '0%';
+            flashCard.textContent = `${cards[0].question}`
+            progressText.textContent = `${1} of ${cards.length}`
+        } catch (error) {
+            console.error('Error loading cards:', error);
+        }
+    }
+
+    controls.forEach(control => control.addEventListener('click', () => {
+        const action = control.getAttribute('data-action');
+        if (action === 'previous') {
+            switchCard(currentCardIndex - 1);
+        } else if (action === 'answer') {
+            showAnswer();
+        } else if (action === 'next') {
+            switchCard(currentCardIndex + 1);
+        }
+    }));
+
+    function switchCard(newIndex){
+        if (cards.length === 0) return;
+        if (newIndex < 0 || newIndex >= cards.length) return;
+        currentCardIndex = newIndex;
+        isAnswerShown = false;
+        flashCard.textContent = cards[currentCardIndex].question;
+        progressText.textContent = `${currentCardIndex + 1} of ${cards.length}`;
+        const progressPercent = ((currentCardIndex + 1) / cards.length) * 100;
+        progressBar.style.width = `${progressPercent}%`;
+    }
+
+    function showAnswer() {
+        if (cards.length === 0) return;
+        if (!isAnswerShown) {
+            flashCard.textContent = cards[currentCardIndex].answer;
+            isAnswerShown = true;
+        } else {
+            flashCard.textContent = cards[currentCardIndex].question;
+            isAnswerShown = false;
+        }
+    }
+
+    loadCards();
+</script>

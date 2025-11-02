@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "question": "What is the difference between var, let, and const?",
+        "answer": "var is function-scoped and can be redeclared; let is block-scoped and cannot be redeclared in the same scope; const is block-scoped and cannot be redeclared or reassigned."
+    },
+    {
+        "id": 2,
+        "question": "What is a closure in JavaScript?",
+        "answer": "A closure is a function that remembers and accesses variables from outside its own scope, even after the outer function has finished executing."
+    },
+    {
+        "id": 3,
+        "question": "Explain the concept of hoisting.",
+        "answer": "Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope before code execution."
+    },
+    {
+        "id": 4,
+        "question": "What is the difference between == and ===?",
+        "answer": "== compares values after type coercion; === compares both value and type without coercion."
+    },
+    {
+        "id": 5,
+        "question": "What is an arrow function?",
+        "answer": "An arrow function is a concise way to write functions using the => syntax, and it does not have its own 'this' context."
+    },
+    {
+        "id": 6,
+        "question": "What is the event loop?",
+        "answer": "The event loop is a mechanism that handles asynchronous callbacks in JavaScript, allowing non-blocking operations."
+    },
+    {
+        "id": 7,
+        "question": "What is the difference between null and undefined?",
+        "answer": "undefined means a variable has been declared but not assigned a value; null is an assignment value that represents no value."
+    },
+    {
+        "id": 8,
+        "question": "How do you create an object in JavaScript?",
+        "answer": "You can create an object using object literals {}, the Object constructor, or Object.create()."
+    },
+    {
+        "id": 9,
+        "question": "What is a promise?",
+        "answer": "A promise is an object representing the eventual completion or failure of an asynchronous operation."
+    },
+    {
+        "id": 10,
+        "question": "What is the difference between synchronous and asynchronous code?",
+        "answer": "Synchronous code executes sequentially; asynchronous code allows other operations to run while waiting for tasks to complete."
+    },
+    {
+        "id": 11,
+        "question": "What is the use of the 'this' keyword?",
+        "answer": "'this' refers to the object from which the function was called, and its value depends on the invocation context."
+    },
+    {
+        "id": 12,
+        "question": "How do you clone an object in JavaScript?",
+        "answer": "You can clone an object using Object.assign({}, obj), the spread operator {...obj}, or structuredClone(obj)."
+    },
+    {
+        "id": 13,
+        "question": "What is a callback function?",
+        "answer": "A callback function is a function passed as an argument to another function and executed after some operation completes."
+    },
+    {
+        "id": 14,
+        "question": "What is the difference between map and forEach?",
+        "answer": "map returns a new array with transformed elements; forEach executes a function for each element but returns undefined."
+    },
+    {
+        "id": 15,
+        "question": "How do you handle errors in JavaScript?",
+        "answer": "You can handle errors using try...catch blocks, or by handling promise rejections with .catch()."
+    },
+    {
+        "id": 16,
+        "question": "What is destructuring?",
+        "answer": "Destructuring is a syntax that allows extracting values from arrays or properties from objects into distinct variables."
+    },
+    {
+        "id": 17,
+        "question": "What is the spread operator?",
+        "answer": "The spread operator (...) expands arrays or objects into individual elements or properties."
+    },
+    {
+        "id": 18,
+        "question": "What is the difference between function declaration and function expression?",
+        "answer": "Function declarations are hoisted and can be called before they appear; function expressions are not hoisted."
+    },
+    {
+        "id": 19,
+        "question": "What is the prototype chain?",
+        "answer": "The prototype chain is the mechanism by which objects inherit properties and methods from other objects."
+    },
+    {
+        "id": 20,
+        "question": "How do you check if a variable is an array?",
+        "answer": "Use Array.isArray(variable) to check if a variable is an array."
+    },
+    {
+        "id": 21,
+        "question": "What is the difference between localStorage and sessionStorage?",
+        "answer": "localStorage persists data across browser sessions; sessionStorage persists data only for the current session."
+    },
+    {
+        "id": 22,
+        "question": "What is a template literal?",
+        "answer": "A template literal is a string enclosed by backticks (`) that allows embedded expressions using ${}."
+    },
+    {
+        "id": 23,
+        "question": "What is the purpose of the 'use strict' directive?",
+        "answer": "'use strict' enforces stricter parsing and error handling in JavaScript code."
+    },
+    {
+        "id": 24,
+        "question": "How do you debounce a function?",
+        "answer": "Debouncing ensures a function is only called after a certain delay since the last invocation, often using setTimeout."
+    },
+    {
+        "id": 25,
+        "question": "What is the difference between call, apply, and bind?",
+        "answer": "call and apply invoke a function with a specified 'this' value; bind returns a new function with bound 'this'."
+    },
+    {
+        "id": 26,
+        "question": "What is an IIFE?",
+        "answer": "An IIFE (Immediately Invoked Function Expression) is a function that runs as soon as it is defined."
+    }
+]
