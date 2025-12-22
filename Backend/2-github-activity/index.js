@@ -82,7 +82,7 @@ async function fetchUser(user) {
         );
       }
       if (stat.watches) {
-        console.log(`- Starred ${repo}}`);
+        console.log(`- Starred ${repo}`);
       }
     });
   } catch (error) {

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get in touch with me. Contact form for inquiries, collaborations, and feedback."
+    />
+    <meta
+      name="keywords"
+      content="contact, email, inquiry, feedback, collaboration"
+    />
+    <meta name="author" content="John Doe" />
+    <meta
+      property="og:title"
+      content="Contact - John Doe | Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Send me a message. I'd love to hear from you."
+    />
+    <meta property="og:type" content="website" />
+    <title>Contact - John Doe | Frontend Developer</title>
+    <link rel="icon" href="./favicon.jpeg" type="image/jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <p>John Doe</p>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="articles.html">Articles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <header>
+        <h1>Get In Touch</h1>
+        <p>Have a question or want to collaborate? Send me a message.</p>
+      </header>
+
+      <section>
+        <h2>Contact Information</h2>
+        <address>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:john@example.com">john@example.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+1234567890">+1 (234) 567-890</a>
+          </p>
+          <p><strong>Location:</strong> New York, USA</p>
+        </address>
+      </section>
+
+      <section>
+        <h2>Contact Form</h2>
+        <form action="/" method="POST">
+          <fieldset>
+            <legend>Send me a Message</legend>
+
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your full name"
+              />
+            </div>
+
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your.email@example.com"
+              />
+            </div>
+
+            <div>
+              <label for="phone">Phone (Optional):</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+1 (234) 567-890"
+              />
+            </div>
+
+            <div>
+              <label for="subject">Subject:</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="What is this about?"
+              />
+            </div>
+
+            <div>
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="8"
+                required
+                placeholder="Please write your message here..."
+              ></textarea>
+            </div>
+
+            <div>
+              <label for="inquiry-type">Type of Inquiry:</label>
+              <select id="inquiry-type" name="inquiry-type">
+                <option value="">-- Select an option --</option>
+                <option value="freelance">Freelance Project</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <input type="checkbox" id="subscribe" name="subscribe" />
+              <label for="subscribe">Subscribe to my newsletter</label>
+            </div>
+
+            <button type="submit">Send Message</button>
+            <button type="reset">Clear Form</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <h2>Connect With Me</h2>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Dev.to</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 John Doe. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
