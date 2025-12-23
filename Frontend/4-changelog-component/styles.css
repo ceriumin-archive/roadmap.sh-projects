@@ -1,0 +1,82 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+header p {
+  color: rgb(138, 136, 136);
+}
+
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline {
+  display: flex;
+  gap: 50px;
+  margin-top: 47px;
+}
+
+.timeline:first-child {
+  margin-top: 75px;
+}
+
+.timeline-item__date {
+  color: rgb(138, 136, 136);
+  min-width: 400px;
+  text-align: right;
+  z-index: 1;
+}
+
+.timeline-item__circle {
+  background-color: black;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  z-index: 0;
+  position: a;
+}
+
+.timeline-item__line {
+  background-color: black;
+  height: 50px;
+  width: 2px;
+  position: relative;
+  top: -50px;
+  left: 7.5px;
+}
+
+.timeline:last-of-type .timeline-item__line {
+  background-color: black;
+  height: 125px;
+  width: 2px;
+  position: relative;
+  top: -50px;
+  left: 7.5px;
+}
+
+.timeline-item__entry {
+  min-width: 500px;
+  word-break: break-word;
+  z-index: 1;
+}
+
+.cta-button {
+  background-color: rgb(31, 31, 31);
+  color: white;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  margin-top: 100px;
+}
